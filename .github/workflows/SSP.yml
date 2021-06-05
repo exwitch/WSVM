@@ -12,10 +12,10 @@ jobs:
     - name: Downloading important files.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/grabtenone/SSP/main/files/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/grabtenone/SSP/main/files/login.bat -OutFile login.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/grabtenone/SSP/main/files/wallpaper.png -OutFile wallpaper.bmp
-        Invoke-WebRequest https://raw.githubusercontent.com/grabtenone/SSP/main/files/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/exwitch/WSVM/main/files/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/exwitch/WSVM/main/files/login.bat -OutFile login.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/exwitch/WSVM/main/files/wallpaper.png -OutFile wallpaper.bmp
+        Invoke-WebRequest https://raw.githubusercontent.com/exwitch/WSVM/main/files/wallpaper.bat -OutFile wallpaper.bat
     - name: Extracting ngrok file.
       run: Expand-Archive ngrok.zip
     - name: Connecting to your ngrok account.
@@ -37,5 +37,5 @@ jobs:
       run: cmd /c login.bat
     - name: RDP successfully created! | Windows Server 2019 by Exdeus Arch.
       run: | 
-        Invoke-WebRequest https://github.com/grabtenone/SSP/raw/main/files/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/exwitch/WSVM/raw/main/files/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
